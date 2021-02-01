@@ -1,6 +1,11 @@
+import React from "react";
 import "./App.scss";
 
-const App: React.FC = () => <div className="example">React App</div>;
+const App: React.FC = () => (
+  <div className="App">
+    App
+  </div>
+);
 
 const AppWrapper: React.FC = () => (
   // TODO: Update Provider later
