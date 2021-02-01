@@ -17,7 +17,13 @@
     "eject": "react-scripts eject",
     "script:update-scss": "node scripts/update-scss.js",
     "lint": "run-s lint:script",
-    "lint:script": "eslint 'src/**/*.{ts,tsx,js,jsx}'"
+    "lint:script": "eslint 'src/**/*.{ts,tsx,js,jsx}'",
+    "gen:component": "hygen component new --level .",
+    "gen:component:atoms": "hygen component new --level atoms",
+    "gen:component:molecule": "hygen component new --level molecules",
+    "gen:component:organism": "hygen component new --level organisms",
+    "gen:component:template": "hygen component new --level templates",
+    "gen:page": "hygen page new --level pages"
   },
   "eslintConfig": {
     "extends": [
