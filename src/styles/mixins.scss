@@ -1,0 +1,42 @@
+@mixin fontBase($fs: 1, $lh: 1) {
+  font-size: rem($fs);
+  line-height: rem($lh);
+}
+
+@mixin text-overflow($number: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: ($number);
+}
+
+@mixin py($pt: 0, $pb: 0) {
+  padding-top: rem($pt);
+  padding-bottom: rem($pb);
+}
+
+@mixin px($pl: 0, $pr: 0) {
+  padding-left: rem($pl);
+  padding-right: rem($pr);
+}
+
+@mixin my($mt, $mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+
+@mixin mx($ml, $mr) {
+  margin-left: $ml;
+  margin-right: $mr;
+}
+
+@mixin aspectRatio($width: 1, $height: 1) {
+  position: relative;
+
+  &:before {
+    display: block;
+    padding-bottom: ($height / $width) * 100%;
+    content: "";
+  }
+}
